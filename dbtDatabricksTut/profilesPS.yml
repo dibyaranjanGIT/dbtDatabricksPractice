@@ -1,0 +1,47 @@
+dbtDatabricksTut:
+  outputs:
+    dev:
+      catalog: dbtdemo
+      host: dbc-a7bc5cde-9214.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/8a31a23efc9f80dd
+      schema: default
+      threads: 1
+      token: ***
+      type: databricks
+  target: dev
+dbt_duck_project:
+  outputs:
+    dev:
+      path: dev.duckdb
+      threads: 1
+      type: duckdb
+    prod:
+      path: prod.duckdb
+      threads: 4
+      type: duckdb
+  target: dev
+dbt_glue_redship_pj:
+  outputs:
+    dev:
+      dbname: dev
+      host: sss
+      password: '111'
+      port: 0
+      schema: dev
+      threads: 1
+      type: redshift
+      user: dev
+  target: dev
+my_dbt_project:
+  outputs:
+    dev:
+      account: ZKTKSYX-BM33255
+      database: DBT_DEMO_DB
+      private_key_path: C:\Users\dibya\Git\dbt\rsa_key.p8
+      role: ACCOUNTADMIN
+      schema: DBT_DEMO_SCHEMA
+      threads: 1
+      type: snowflake
+      user: DBT_USER
+      warehouse: DBT_DEMO_WH
+  target: dev
