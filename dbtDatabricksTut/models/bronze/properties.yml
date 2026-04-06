@@ -5,5 +5,19 @@ models:
     config:
         materialized: view
 
+  - name: bronze_sales
+    columns:
+      - name: gross_amount
+        data_tests:
+          - no_negative_values
+
+  - name: bronze_store
+    columns:
+      - name: store_sk
+        data_tests:
+          - unique
+          - not_null
+
+
 
     
