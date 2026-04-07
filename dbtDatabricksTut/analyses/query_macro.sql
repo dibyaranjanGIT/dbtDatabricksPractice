@@ -1,0 +1,1 @@
+SELECT {{ multiply(2, 23) }} AS result;

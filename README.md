@@ -45,6 +45,26 @@ Or run everything in one step:
 
 `dbt build`
 
+## Run Commands (This Project)
+
+From repository root:
+
+`Push-Location dbtDatabricksTut; ..\.venv\Scripts\dbt.exe parse; Pop-Location`
+
+`Push-Location dbtDatabricksTut; ..\.venv\Scripts\dbt.exe snapshot; Pop-Location`
+
+`Push-Location dbtDatabricksTut; ..\.venv\Scripts\dbt.exe build; Pop-Location`
+
+From inside `dbtDatabricksTut` with venv activated:
+
+`dbt parse`
+
+`dbt snapshot`
+
+`dbt build`
+
+`dbt build --target prod`
+
 ---
 
 ## dbt Commands Reference

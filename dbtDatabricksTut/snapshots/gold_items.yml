@@ -1,0 +1,10 @@
+version: 2
+
+snapshots:
+  - name: gold_items
+    relation: ref('source_gold_items')
+    config:
+      schema: gold
+      unique_key: id
+      strategy: timestamp
+      updated_at: updateDate
